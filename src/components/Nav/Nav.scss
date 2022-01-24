@@ -1,0 +1,28 @@
+@import '/src/mixins.scss';
+
+.nav {
+  @include flexbox($placeItems: center);
+  padding: 0 1rem;
+
+  &__items {
+    @include flexbox($placeItems: flex-start, $placeContent: flex-end, $basis: 100%, $shrink: 1);
+    list-style: none;
+
+    > li {
+      margin-left: 1rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      background-position: 0 4px;
+    }
+  }
+
+  &__logo {
+    cursor: pointer;
+  }
+}
