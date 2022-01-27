@@ -1,0 +1,29 @@
+@import '/src/variables.scss';
+
+.hero {
+  background-color: $secondary-color;
+  padding: 1.5rem 0;
+
+  &-text {
+    h3 {
+      font-weight: normal;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 4.5rem;
+    }
+  }
+
+  &-img {
+    background: $primary-color;
+    padding: 10rem;
+
+    border-radius: 11rem;
+  }
+
+  &-icons {
+    flex: 0;
+  }
+}
