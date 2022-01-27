@@ -1,3 +1,6 @@
+@import '/node_modules/bootstrap/scss/mixins';
+@import '/node_modules/bootstrap/scss/functions';
+@import '/node_modules/bootstrap/scss/variables';
 @import '/src/variables.scss';
 
 .hero {
@@ -5,6 +8,10 @@
   padding: 1.5rem 0;
 
   &-text {
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+    }
+
     h3 {
       font-weight: normal;
       margin-top: 1rem;
@@ -12,18 +19,30 @@
     }
 
     h1 {
-      font-size: 4.5rem;
+      font-weight: 400;
+    }
+
+    .button {
+      @include media-breakpoint-down(lg) {
+        margin: 0 auto;
+      }
     }
   }
 
   &-img {
     background: $primary-color;
     padding: 10rem;
-
+    max-width: 10rem;
     border-radius: 11rem;
+    margin: auto;
   }
 
   &-icons {
-    flex: 0;
+    text-align: right;
+    height: 100%;
+
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
   }
 }

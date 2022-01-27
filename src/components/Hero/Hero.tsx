@@ -1,30 +1,51 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Stack from 'react-bootstrap/Stack';
+import { Col, Row, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 import './Hero.scss';
 
 function Hero() {
+  const renderGreeting = () => (
+    <div className="hero-text">
+      <h3>Hi there, I'm</h3>
+      <h1 className="display-2">Julian Memai</h1>
+      <h3>Junior Software Developer</h3>
+
+      <button className="button mt-4">Contact</button>
+    </div>
+  );
+
+  const renderIcons = () => (
+    <Row className="hero-icons align-items-center">
+      <Col md={12} xs={4}>
+        <FontAwesomeIcon icon={faLinkedin} size="lg" />
+      </Col>
+
+      <Col md={12} xs={4}>
+        <FontAwesomeIcon icon={faGithubSquare} size="lg" />
+      </Col>
+
+      <Col md={12} xs={4}>
+        <FontAwesomeIcon icon={faTwitterSquare} size="lg" />
+      </Col>
+    </Row>
+  );
   return (
     <div className="hero">
       <Container>
-        <Stack direction="horizontal" gap={3} className="justify-content-between">
-          <div className="hero-text">
-            <h3>Hi there, I'm</h3>
-            <h1>Julian Memai</h1>
-            <h3>Junior Software Developer</h3>
-            <button className="button mt-4">Contact</button>
-          </div>
+        <Row>
+          <Col xl={6} lg={5} md={12}>
+            {renderGreeting()}
+          </Col>
 
-          <div className="hero-img"></div>
+          <Col xl={5} lg={6} md={11} className="gy-5">
+            <div className="hero-img"></div>
+          </Col>
 
-          <Stack gap={5} className="hero-icons align-self-center">
-            <FontAwesomeIcon icon={faLinkedin} size="lg" />
-            <FontAwesomeIcon icon={faGithubSquare} size="lg" />
-            <FontAwesomeIcon icon={faTwitterSquare} size="lg" />
-          </Stack>
-        </Stack>
+          <Col md={1} className="gy-5">
+            {renderIcons()}
+          </Col>
+        </Row>
       </Container>
     </div>
   );
