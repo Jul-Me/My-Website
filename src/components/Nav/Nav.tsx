@@ -23,7 +23,7 @@ function Nav() {
       );
     } else {
       return (
-        <Link key={item.id} to={item.url} className="button ms-md-3 m-auto">
+        <Link key={item.id} to={item.url} className="button ms-lg-3 m-auto">
           {item.text}
         </Link>
       );
