@@ -2,14 +2,22 @@
 @import '/node_modules/bootstrap/scss/functions';
 @import '/node_modules/bootstrap/scss/variables';
 @import '/src/variables.scss';
+@import '/src/index.scss';
 
 .hero {
   background-color: $secondary-color;
   padding: 1.5rem 0;
 
   &-text {
+    white-space: nowrap;
+
     @include media-breakpoint-down(lg) {
       text-align: center;
+    }
+
+    span {
+      white-space: pre;
+      @extend .rubberBandAnimation;
     }
 
     h3 {
@@ -26,6 +34,12 @@
       @include media-breakpoint-down(lg) {
         margin: 0 auto;
       }
+
+      @extend .rubberBandAnimation;
+
+      &:hover {
+        @extend .animated;
+      }
     }
   }
 
@@ -41,7 +55,7 @@
     text-align: right;
     height: 100%;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       text-align: center;
     }
   }
