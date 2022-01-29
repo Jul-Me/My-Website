@@ -18,7 +18,7 @@ function Nav(): JSX.Element {
   const renderItem = (item: NavItems) => {
     if (!item.isButton) {
       return (
-        <StyledNav.Link key={item.id} href={item.url}>
+        <StyledNav.Link className="nav-links" key={item.id} href={item.url}>
           {item.text}
         </StyledNav.Link>
       );

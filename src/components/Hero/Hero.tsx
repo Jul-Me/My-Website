@@ -37,19 +37,19 @@ function Hero(): JSX.Element {
           rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
-          <FontAwesomeIcon icon={faLinkedin} size="lg" />
+          <FontAwesomeIcon icon={faLinkedin} size="2x" />
         </a>
       </Col>
 
       <Col lg={12} xs={4}>
         <a href="https://github.com/Jul-Me" target="_blank" rel="noopener noreferrer" aria-label="Github">
-          <FontAwesomeIcon icon={faGithubSquare} size="lg" />
+          <FontAwesomeIcon icon={faGithubSquare} size="2x" />
         </a>
       </Col>
 
       <Col lg={12} xs={4}>
         <a href="https://twitter.com/julianmemai" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-          <FontAwesomeIcon icon={faTwitterSquare} size="lg" />
+          <FontAwesomeIcon icon={faTwitterSquare} size="2x" />
         </a>
       </Col>
     </Row>
@@ -59,15 +59,17 @@ function Hero(): JSX.Element {
     <div className="hero">
       <Container>
         <Row>
-          <Col lg={6} md={12} className="hero-text gy-md-5">
+          <Col lg={6} md={12} className="hero-text gy-5">
             {renderGreeting()}
           </Col>
 
-          <Col lg={5} md={12} className="gy-md-5">
+          <Col lg={5} md={12} className="gy-5">
             <div className="hero-img"></div>
           </Col>
 
-          <Col className="gy-md-5">{renderIcons()}</Col>
+          <Col lg={1} className="gy-5">
+            {renderIcons()}
+          </Col>
         </Row>
       </Container>
     </div>

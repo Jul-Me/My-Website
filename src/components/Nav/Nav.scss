@@ -1,3 +1,8 @@
+@import '/src/variables.scss';
+
 .nav {
   font-weight: 500;
+  &-links {
+    color: $text-color !important;
+  }
 }
