@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import StyledNav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import { NavItems } from '../../types/NavItems';
+import './Nav.scss';
 
 function Nav(): JSX.Element {
   const navItems: NavItems[] = [
@@ -31,7 +32,7 @@ function Nav(): JSX.Element {
   };
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" className="nav">
       <Container>
         <Navbar.Brand href="#home">Logo</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

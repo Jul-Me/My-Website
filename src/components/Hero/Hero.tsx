@@ -11,12 +11,12 @@ function Hero(): JSX.Element {
   const transformation = (str: string) => [...str].map((char) => <Item key={uuid()} char={char} />);
 
   const renderGreeting = () => {
-    const str1 = `Hi there, I'm`;
-    const str2 = `Julian Memai`;
+    const str1 = `Hi there, I'm `;
+    const str2 = `Julian Memai `;
     const str3 = `Junior Software Developer`;
 
     return (
-      <div className="hero-text">
+      <>
         <h3>{transformation(str1)}</h3>
         <h1 className="display-2">{transformation(str2)}</h1>
         <h3>{transformation(str3)}</h3>
@@ -24,7 +24,7 @@ function Hero(): JSX.Element {
         <button className="button mt-4" onClick={() => navigate('#contact')}>
           Contact
         </button>
-      </div>
+      </>
     );
   };
 
@@ -59,15 +59,15 @@ function Hero(): JSX.Element {
     <div className="hero">
       <Container>
         <Row>
-          <Col xl={6} lg={5} md={12}>
+          <Col lg={6} md={12} className="hero-text gy-md-5">
             {renderGreeting()}
           </Col>
 
-          <Col xl={5} lg={6} md={12} className="gy-5">
+          <Col lg={5} md={12} className="gy-md-5">
             <div className="hero-img"></div>
           </Col>
 
-          <Col className="gy-5">{renderIcons()}</Col>
+          <Col className="gy-md-5">{renderIcons()}</Col>
         </Row>
       </Container>
     </div>
