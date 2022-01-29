@@ -3,7 +3,7 @@ import Nav from './components/Nav/Nav';
 import Hero from './components/Hero/Hero';
 import './App.scss';
 
-function App() {
+function App(): JSX.Element {
   return (
     <div className="app">
       <Nav />

@@ -1,11 +1,13 @@
-import React, { SyntheticEvent, useState } from 'react';
+import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
+import { useNavigate } from 'react-router-dom';
 import { Col, Row, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 import './Hero.scss';
 
-function Hero() {
+function Hero(): JSX.Element {
+  const navigate = useNavigate();
   const transformation = (str: string) => [...str].map((char) => <Item key={uuid()} char={char} />);
 
   const renderGreeting = () => {
@@ -19,7 +21,9 @@ function Hero() {
         <h1 className="display-2">{transformation(str2)}</h1>
         <h3>{transformation(str3)}</h3>
 
-        <button className="button mt-4">Contact</button>
+        <button className="button mt-4" onClick={() => navigate('#contact')}>
+          Contact
+        </button>
       </div>
     );
   };
@@ -27,15 +31,26 @@ function Hero() {
   const renderIcons = () => (
     <Row className="hero-icons align-items-center">
       <Col lg={12} xs={4}>
-        <FontAwesomeIcon icon={faLinkedin} size="lg" />
+        <a
+          href="https://www.linkedin.com/in/julian-memai/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <FontAwesomeIcon icon={faLinkedin} size="lg" />
+        </a>
       </Col>
 
       <Col lg={12} xs={4}>
-        <FontAwesomeIcon icon={faGithubSquare} size="lg" />
+        <a href="https://github.com/Jul-Me" target="_blank" rel="noopener noreferrer" aria-label="Github">
+          <FontAwesomeIcon icon={faGithubSquare} size="lg" />
+        </a>
       </Col>
 
       <Col lg={12} xs={4}>
-        <FontAwesomeIcon icon={faTwitterSquare} size="lg" />
+        <a href="https://twitter.com/julianmemai" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <FontAwesomeIcon icon={faTwitterSquare} size="lg" />
+        </a>
       </Col>
     </Row>
   );
@@ -65,7 +80,7 @@ interface ItemProps {
   char: string;
 }
 
-const Item = ({ char }: ItemProps) => {
+const Item = ({ char }: ItemProps): JSX.Element => {
   const [active, setActive] = useState(false);
 
   return (

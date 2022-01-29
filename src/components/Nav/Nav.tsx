@@ -5,7 +5,7 @@ import StyledNav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import { NavItems } from '../../types/NavItems';
 
-function Nav() {
+function Nav(): JSX.Element {
   const navItems: NavItems[] = [
     { id: 'home', text: 'Home', url: '#home', isButton: false },
     { id: 'about', text: 'About', url: '#about', isButton: false },
