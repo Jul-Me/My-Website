@@ -1,0 +1,13 @@
+@import '/src/index.scss';
+
+.service {
+  background-color: $secondary-color;
+  @extend .section-gutter;
+
+  &-cards {
+    text-align: center;
+    align-content: center;
+    box-shadow: 0px 2px 2px 3px #e4e4e4;
+    width: 20rem;
+  }
+}
