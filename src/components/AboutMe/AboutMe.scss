@@ -1,0 +1,9 @@
+@import '/src/index.scss';
+
+.about-me {
+  @extend .section-gutter;
+
+  .text-bold {
+    font-weight: 600;
+  }
+}
