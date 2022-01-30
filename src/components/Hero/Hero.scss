@@ -6,9 +6,9 @@
 
 .hero {
   background-color: $secondary-color;
-  padding: 1.5rem 0;
+  @extend .section-gutter;
 
-  &-text {
+  &-greeting {
     white-space: nowrap;
 
     @include media-breakpoint-down(lg) {
@@ -40,6 +40,12 @@
       &:hover {
         @extend .animated;
       }
+    }
+  }
+
+  &-col {
+    @include media-breakpoint-down(lg) {
+      margin-top: 3rem;
     }
   }
 

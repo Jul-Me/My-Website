@@ -59,15 +59,15 @@ function Hero(): JSX.Element {
     <div className="hero">
       <Container>
         <Row>
-          <Col lg={6} md={12} className="hero-text gy-5">
+          <Col lg={6} md={12} className="hero-greeting hero-col">
             {renderGreeting()}
           </Col>
 
-          <Col lg={5} md={12} className="gy-5">
+          <Col lg={5} md={12} className="hero-col">
             <div className="hero-img"></div>
           </Col>
 
-          <Col lg={1} className="gy-5">
+          <Col lg={1} className="hero-col">
             {renderIcons()}
           </Col>
         </Row>

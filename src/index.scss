@@ -25,6 +25,10 @@ body {
   }
 }
 
+.section-gutter {
+  padding: 5rem 0;
+}
+
 @keyframes rubberBand {
   from {
     transform: scale3d(1, 1, 1);
