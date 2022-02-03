@@ -6,4 +6,10 @@
   .text-bold {
     font-weight: 600;
   }
+
+  &-info {
+    @include media-breakpoint-down(lg) {
+      margin-top: 3rem;
+    }
+  }
 }

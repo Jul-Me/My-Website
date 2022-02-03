@@ -24,17 +24,15 @@ function Service(): JSX.Element {
   return (
     <div className="service">
       <Container>
-        <div>
-          <Row className="mb-5">
-            <h1>What I Offer?</h1>
-          </Row>
+        <Row className="mb-5">
+          <h1>What I Offer?</h1>
+        </Row>
 
-          <Row>
-            {renderCard('Web Design', webDesignText)}
-            {renderCard('Front-End', frontEndText)}
-            {renderCard('Back-End', backEndText)}
-          </Row>
-        </div>
+        <Row>
+          {renderCard('Web Design', webDesignText)}
+          {renderCard('Front-End', frontEndText)}
+          {renderCard('Back-End', backEndText)}
+        </Row>
       </Container>
     </div>
   );

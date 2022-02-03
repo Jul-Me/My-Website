@@ -7,7 +7,7 @@ import './AboutMe.scss';
 function AboutMe(): JSX.Element {
   const renderBio = () => {
     return (
-      <>
+      <div className="about-me-info">
         <h1>Me, Myself and I</h1>
 
         <p className="mt-3">
@@ -17,7 +17,7 @@ function AboutMe(): JSX.Element {
           tortor convallis sollicitudin quis vel risus. Aliquam commodo tellus vel ipsum ullamcorper congue. Praesent
           laoreet ligula placerat elementum congue. In sed fringilla velit, eu facilisis elit.
         </p>
-      </>
+      </div>
     );
   };
 
@@ -25,25 +25,25 @@ function AboutMe(): JSX.Element {
     return (
       <>
         <Row className="mt-3">
-          <Col>
-            <span className="text-bold">Gender: </span>
+          <Col xl={6} lg={12} className="d-flex align-items-center">
+            <span className="text-bold">Gender:&nbsp;</span>
             <span>Male</span>
           </Col>
 
-          <Col>
-            <span className="text-bold">Location: </span>
+          <Col xl={6} lg={12} className="d-flex align-items-center">
+            <span className="text-bold">Location:&nbsp;</span>
             <span>Reading, UK</span>
           </Col>
         </Row>
 
         <Row className="mt-3">
-          <Col>
-            <span className="text-bold">Age: </span>
+          <Col xl={6} lg={12} className="d-flex align-items-center">
+            <span className="text-bold">Age:&nbsp;</span>
             <span>30</span>
           </Col>
 
-          <Col>
-            <span className="text-bold">Email: </span>
+          <Col xl={6} lg={12} className="d-flex align-items-center">
+            <span className="text-bold">Email:&nbsp;</span>
             <span>memai.julian@gmail.com</span>
           </Col>
         </Row>
@@ -56,19 +56,19 @@ function AboutMe(): JSX.Element {
       <>
         <h2 className="mt-5">And my hobbies</h2>
 
-        <Row className="mt-4">
-          <Col>
+        <Row className="mt-4 ">
+          <Col xl={4} lg={6} md={12}>
             <FontAwesomeIcon icon={faDumbbell} size="lg" />
             <span className="ms-4 fs-5">Exercise</span>
           </Col>
 
-          <Col>
-            <FontAwesomeIcon className="ms-4" icon={faBicycle} size="lg" />
+          <Col xl={4} lg={6} md={12}>
+            <FontAwesomeIcon icon={faBicycle} size="lg" />
             <span className="ms-4 fs-5">Cycling</span>
           </Col>
 
-          <Col>
-            <FontAwesomeIcon className="ms-4" icon={faPlane} size="lg" />
+          <Col xl={4} lg={12} md={12}>
+            <FontAwesomeIcon icon={faPlane} size="lg" />
             <span className="ms-4 fs-5">Traveling</span>
           </Col>
         </Row>
@@ -80,11 +80,11 @@ function AboutMe(): JSX.Element {
     <div className="about-me">
       <Container>
         <Row>
-          <Col>
+          <Col lg={6} md={12}>
             <div style={{ padding: '10rem', maxWidth: '70%', backgroundColor: 'grey' }}></div>
           </Col>
 
-          <Col>
+          <Col lg={6} md={12}>
             {renderBio()}
             {renderDetails()}
             {renderHobbies()}
