@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDumbbell, faPlane, faBicycle } from '@fortawesome/free-solid-svg-icons';
+import { Sections } from '../../types/Sections';
 import './AboutMe.scss';
 
 function AboutMe(): JSX.Element {
@@ -77,7 +78,7 @@ function AboutMe(): JSX.Element {
   };
 
   return (
-    <div className="about-me">
+    <div className="about-me" id={Sections.ABOUT}>
       <Container>
         <Row>
           <Col lg={6} md={12}>

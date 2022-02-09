@@ -3,20 +3,20 @@ import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import StyledNav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
-import { NavItems } from '../../types/NavItems';
 import logo from '../../assets/images/logo.png';
+import { NavItem } from '../../types/NavItem';
+import { Sections } from '../../types/Sections';
 import './Nav.scss';
 
 function Nav(): JSX.Element {
-  const navItems: NavItems[] = [
-    { id: 'home', text: 'Home', url: '#home', isButton: false },
-    { id: 'about', text: 'About', url: '#about', isButton: false },
-    { id: 'services', text: 'Services', url: '#services', isButton: false },
-    { id: 'portofolio', text: 'Portofolio', url: '#portofolio', isButton: false },
-    { id: 'contact', text: 'Contact', url: '#contact', isButton: true },
+  const navItems: NavItem[] = [
+    { id: Sections.HOME, text: 'Home', url: `#${Sections.HOME}`, isButton: false },
+    { id: Sections.ABOUT, text: 'About', url: `#${Sections.ABOUT}`, isButton: false },
+    { id: Sections.PORTFOLIO, text: 'Portfolio', url: `#${Sections.PORTFOLIO}`, isButton: false },
+    { id: Sections.CONTACT, text: 'Contact', url: `#${Sections.CONTACT}`, isButton: true },
   ];
 
-  const renderItem = (item: NavItems) => {
+  const renderItem = (item: NavItem) => {
     if (!item.isButton) {
       return (
         <StyledNav.Link className="nav-links" key={item.id} href={item.url}>

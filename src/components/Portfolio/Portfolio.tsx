@@ -1,13 +1,14 @@
 import React from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import { PortfolioItems } from '../../types/PortfolioItems';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { faExternalLinkSquare } from '@fortawesome/free-solid-svg-icons';
+import { PortfolioItem } from '../../types/PortfolioItem';
+import { Sections } from '../../types/Sections';
 import './Portfolio.scss';
 
 function Portfolio(): JSX.Element {
-  const portfolioItems: PortfolioItems[] = [
+  const portfolioItems: PortfolioItem[] = [
     {
       id: 'rock-paper-scissors',
       text: 'Rock Paper Scissors',
@@ -45,7 +46,7 @@ function Portfolio(): JSX.Element {
       demoUrl: 'https://github-devfinder-julian.netlify.app/',
     },
   ];
-  const renderCard = (item: PortfolioItems) => {
+  const renderCard = (item: PortfolioItem) => {
     const background = `${process.env.PUBLIC_URL}/images/${item.id}.png`;
 
     return (
@@ -91,7 +92,7 @@ function Portfolio(): JSX.Element {
   };
 
   return (
-    <div className="portfolio">
+    <div className="portfolio" id={Sections.PORTFOLIO}>
       <Container>
         <Row className="mb-5">
           <h1 className="text-end">My Portfolio</h1>

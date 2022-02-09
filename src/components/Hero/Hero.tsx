@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Col, Row, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { Sections } from '../../types/Sections';
 import './Hero.scss';
 
 function Hero(): JSX.Element {
@@ -21,7 +22,7 @@ function Hero(): JSX.Element {
         <h1 className="display-2">{transformation(str2)}</h1>
         <h3>{transformation(str3)}</h3>
 
-        <button className="button mt-4" onClick={() => navigate('#contact')}>
+        <button className="button mt-4" onClick={() => navigate(Sections.CONTACT)}>
           Contact
         </button>
       </>
@@ -56,7 +57,7 @@ function Hero(): JSX.Element {
   );
 
   return (
-    <div className="hero">
+    <div className="hero" id={Sections.HOME}>
       <Container>
         <Row>
           <Col lg={6} md={12} className="hero-greeting hero-col">
