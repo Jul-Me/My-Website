@@ -1,0 +1,55 @@
+@import '/src/index.scss';
+
+.portfolio {
+  @extend .section-gutter;
+
+  &-card {
+    width: 20rem;
+    aspect-ratio: 3/2;
+    background: $secondary-color;
+    transition: background 2s;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0px 2px 2px 3px #e4e4e4;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 0.8rem;
+
+    &:hover {
+      background: url('../../assets/images/grey.png') !important;
+      background-size: 37.5rem;
+
+      .portfolio-content {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-content {
+    opacity: 0;
+  }
+
+  &-footer {
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    > a:not(:last-child) {
+      margin-right: 0.7rem;
+    }
+  }
+
+  &-links {
+    color: inherit;
+
+    &:hover {
+      color: darken($secondary-color, 60%);
+    }
+  }
+}
