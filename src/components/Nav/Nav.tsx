@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import StyledNav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import { NavItems } from '../../types/NavItems';
+import logo from '../../assets/images/logo.png';
 import './Nav.scss';
 
 function Nav(): JSX.Element {
@@ -32,9 +33,12 @@ function Nav(): JSX.Element {
   };
 
   return (
-    <Navbar bg="light" expand="lg" className="nav">
+    <Navbar expand="lg" className="nav">
       <Container>
-        <Navbar.Brand href="#home">Logo</Navbar.Brand>
+        <Navbar.Brand href="#home">
+          <img src={logo} alt="logo" className="nav-logo" />
+        </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Collapse id="basic-navbar-nav">
