@@ -1,8 +1,8 @@
 @import '/src/index.scss';
 
 .hero {
-  background-color: $secondary-color;
   @extend .section-gutter;
+  @extend .stripes-background;
 
   &-greeting {
     white-space: nowrap;
@@ -13,7 +13,7 @@
 
     span {
       white-space: pre;
-      @extend .rubberBandAnimation;
+      @extend .rubber-band-animation;
     }
 
     h3 {
@@ -31,7 +31,7 @@
         margin: 0 auto;
       }
 
-      @extend .rubberBandAnimation;
+      @extend .rubber-band-animation;
 
       &:hover {
         @extend .animated;
@@ -62,7 +62,7 @@
     }
 
     > div {
-      @extend .rubberBandAnimation;
+      @extend .rubber-band-animation;
 
       &:hover {
         @extend .animated;
