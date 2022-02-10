@@ -1,6 +1,6 @@
 export interface NavItem {
   id: string;
   text: string;
-  url: string;
+  url?: string;
   isButton: boolean;
 }

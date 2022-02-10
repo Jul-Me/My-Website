@@ -6,17 +6,33 @@ import { Sections } from '../../types/Sections';
 import './AboutMe.scss';
 
 function AboutMe(): JSX.Element {
+  const getAge = (): number => {
+    const dob = new Date('1991/05/04');
+    const diff_ms = Date.now() - dob.getTime();
+    const age_dt = new Date(diff_ms);
+
+    return Math.abs(age_dt.getUTCFullYear() - 1970);
+  };
+
   const renderBio = () => {
     return (
       <div className="about-me-info">
         <h1>Me, Myself and I</h1>
 
         <p className="mt-3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ligula lacus, finibus non ornare ut,
-          ultrices laoreet erat. Nullam porttitor tortor tempus enim malesuada porta. Etiam aliquet purus mi, eget
-          vehicula tellus facilisis non. Phasellus bibendum cursus nibh, quis pretium mi tempor ac. Cras eget felis in
-          tortor convallis sollicitudin quis vel risus. Aliquam commodo tellus vel ipsum ullamcorper congue. Praesent
-          laoreet ligula placerat elementum congue. In sed fringilla velit, eu facilisis elit.
+          Web Developer | Problem solver
+          <br />
+          <br />
+          Ambitious and driven to always expand my comfort zone with new challenges-adventures.Eager learner with a
+          hands on attitude and strong work ethics.
+          <br />
+          <br />
+          School of Code bootcamp graduate, passionate about developing user-friendly software applications and bringing
+          ideas to life in the browser. Strong preference for Front-End technologies and easy to use, intuitive UX/UI.
+          <br />
+          <br />
+          Skilled in HTML5, CSS, JavaScript, React.js , Node.js , Express.js and PostgreSQL. Working knowledge of Adobe
+          Creative Suite.
         </p>
       </div>
     );
@@ -40,12 +56,12 @@ function AboutMe(): JSX.Element {
         <Row className="mt-3">
           <Col xl={6} lg={12} className="d-flex align-items-center">
             <span className="text-bold">Age:&nbsp;</span>
-            <span>30</span>
+            <span>{getAge()}</span>
           </Col>
 
           <Col xl={6} lg={12} className="d-flex align-items-center">
-            <span className="text-bold">Email:&nbsp;</span>
-            <span>memai.julian@gmail.com</span>
+            <span className="text-bold">Nationality:&nbsp;</span>
+            <span>Greek</span>
           </Col>
         </Row>
       </>

@@ -14,7 +14,7 @@ function Hero(): JSX.Element {
   const renderGreeting = () => {
     const str1 = `Hi there, I'm `;
     const str2 = `Julian Memai `;
-    const str3 = `Junior Software Developer`;
+    const str3 = `Web Developer  | Problem solver`;
 
     return (
       <>
@@ -22,7 +22,7 @@ function Hero(): JSX.Element {
         <h1 className="display-2">{transformation(str2)}</h1>
         <h3>{transformation(str3)}</h3>
 
-        <button className="button mt-4" onClick={() => navigate(Sections.CONTACT)}>
+        <button className="button mt-4" onClick={() => navigate(`#${Sections.CONTACT}`)}>
           Contact
         </button>
       </>

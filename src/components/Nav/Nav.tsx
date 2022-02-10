@@ -13,7 +13,7 @@ function Nav(): JSX.Element {
     { id: Sections.HOME, text: 'Home', url: `#${Sections.HOME}`, isButton: false },
     { id: Sections.ABOUT, text: 'About', url: `#${Sections.ABOUT}`, isButton: false },
     { id: Sections.PORTFOLIO, text: 'Portfolio', url: `#${Sections.PORTFOLIO}`, isButton: false },
-    { id: Sections.CONTACT, text: 'Contact', url: `#${Sections.CONTACT}`, isButton: true },
+    { id: 'resume', text: 'Resume', isButton: true },
   ];
 
   const renderItem = (item: NavItem) => {
@@ -25,7 +25,7 @@ function Nav(): JSX.Element {
       );
     } else {
       return (
-        <Link key={item.id} to={item.url} className="button ms-lg-3 m-auto">
+        <Link key={item.id} to={item.url ? item.url : ''} className="button ms-lg-3 m-auto">
           {item.text}
         </Link>
       );
