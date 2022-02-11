@@ -31,6 +31,10 @@ body {
 
 .section-gutter {
   padding: 5rem 0;
+
+  @include media-breakpoint-down(md) {
+    padding: 3rem 0;
+  }
 }
 
 @keyframes rubberBand {

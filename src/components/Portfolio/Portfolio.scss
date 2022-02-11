@@ -4,8 +4,21 @@
   @extend .section-gutter;
   @extend .stripes-background;
 
+  @include media-breakpoint-down(lg) {
+    text-align: center;
+  }
+
+  &-cols {
+    @include media-breakpoint-down(lg) {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+  }
+
   &-card {
     width: 20rem;
+    max-width: 20rem;
     aspect-ratio: 3/2;
     background: $secondary-color;
     transition: background 2s;
@@ -19,6 +32,10 @@
     background-position: center;
     background-repeat: no-repeat;
     font-size: 0.8rem;
+
+    @include media-breakpoint-down(md) {
+      width: 18rem;
+    }
 
     &:hover {
       background: url('../../assets/images/grey.png') !important;

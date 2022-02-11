@@ -40,17 +40,26 @@
   }
 
   &-col {
-    @include media-breakpoint-down(lg) {
-      margin-top: 3rem;
+    &:not(:first-child) {
+      @include media-breakpoint-down(lg) {
+        margin-top: 3rem;
+      }
     }
   }
 
   &-img {
-    background: $primary-color;
-    padding: 10rem;
+    padding: 12rem;
     max-width: 10rem;
-    border-radius: 11rem;
+    border-radius: 12rem;
     margin: auto;
+    background-image: url('../../assets/images/profile.png') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-down(md) {
+      padding: 6rem;
+    }
   }
 
   &-icons {

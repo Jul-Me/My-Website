@@ -3,13 +3,55 @@
 .about-me {
   @extend .section-gutter;
 
+  @include media-breakpoint-down(lg) {
+    text-align: center;
+  }
+
   .text-bold {
     font-weight: 600;
   }
 
-  &-info {
+  &-details {
+    display: flex;
+    align-items: center;
+
     @include media-breakpoint-down(lg) {
-      margin-top: 3rem;
+      justify-content: center;
+    }
+  }
+
+  &-info {
+    &:not(:first-child) {
+      @include media-breakpoint-down(lg) {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  &-tools {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 3rem;
+    align-content: space-evenly;
+    justify-items: center;
+
+    @include media-breakpoint-down(xl) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 2rem;
+      padding: 0 7rem;
+      align-content: center;
+
+      > svg {
+        font-size: 2rem;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 0 2rem;
     }
   }
 }

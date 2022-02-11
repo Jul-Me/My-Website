@@ -2,6 +2,17 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDumbbell, faPlane, faBicycle } from '@fortawesome/free-solid-svg-icons';
+import {
+  faReact,
+  faNode,
+  faHtml5,
+  faSass,
+  faJsSquare,
+  faGitAlt,
+  faCss3Alt,
+  faFigma,
+  faSketch,
+} from '@fortawesome/free-brands-svg-icons';
 import { Sections } from '../../types/Sections';
 import './AboutMe.scss';
 
@@ -42,24 +53,24 @@ function AboutMe(): JSX.Element {
     return (
       <>
         <Row className="mt-3">
-          <Col xl={6} lg={12} className="d-flex align-items-center">
+          <Col xl={6} lg={12} className="about-me-details">
             <span className="text-bold">Gender:&nbsp;</span>
             <span>Male</span>
           </Col>
 
-          <Col xl={6} lg={12} className="d-flex align-items-center">
+          <Col xl={6} lg={12} className="about-me-details">
             <span className="text-bold">Location:&nbsp;</span>
             <span>Reading, UK</span>
           </Col>
         </Row>
 
         <Row className="mt-3">
-          <Col xl={6} lg={12} className="d-flex align-items-center">
+          <Col xl={6} lg={12} className="about-me-details">
             <span className="text-bold">Age:&nbsp;</span>
             <span>{getAge()}</span>
           </Col>
 
-          <Col xl={6} lg={12} className="d-flex align-items-center">
+          <Col xl={6} lg={12} className="about-me-details">
             <span className="text-bold">Nationality:&nbsp;</span>
             <span>Greek</span>
           </Col>
@@ -98,13 +109,21 @@ function AboutMe(): JSX.Element {
       <Container>
         <Row>
           <Col lg={6} md={12}>
-            <div style={{ padding: '10rem', maxWidth: '70%', backgroundColor: 'grey' }}></div>
-          </Col>
-
-          <Col lg={6} md={12}>
             {renderBio()}
             {renderDetails()}
             {renderHobbies()}
+          </Col>
+
+          <Col lg={6} md={12} className="about-me-tools">
+            <FontAwesomeIcon icon={faReact} size="5x" />
+            <FontAwesomeIcon icon={faJsSquare} size="5x" />
+            <FontAwesomeIcon icon={faNode} size="5x" />
+            <FontAwesomeIcon icon={faSass} size="5x" />
+            <FontAwesomeIcon icon={faHtml5} size="5x" />
+            <FontAwesomeIcon icon={faGitAlt} size="5x" />
+            <FontAwesomeIcon icon={faCss3Alt} size="5x" />
+            <FontAwesomeIcon icon={faFigma} size="5x" />
+            <FontAwesomeIcon icon={faSketch} size="5x" />
           </Col>
         </Row>
       </Container>

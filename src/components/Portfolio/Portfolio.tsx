@@ -45,12 +45,30 @@ function Portfolio(): JSX.Element {
       gitHubUrl: 'https://github.com/Jul-Me/Github-DevFinder',
       demoUrl: 'https://github-devfinder-julian.netlify.app/',
     },
+    {
+      id: 'rock-paper-scissors',
+      text: 'Rock Paper Scissors',
+      description: `Rock Paper Scissors is a personal project build in Vanilla JS.
+        Winning will add one point to your score but if you lose your score will decrease by one as well!
+        A classic game to play, good luck and have fun!`,
+      gitHubUrl: 'https://github.com/Jul-Me/Rock-Paper-Scissors',
+      demoUrl: 'https://rock-paper-scissors-julian.netlify.app/',
+    },
+    {
+      id: 'rock-paper-scissors',
+      text: 'Rock Paper Scissors',
+      description: `Rock Paper Scissors is a personal project build in Vanilla JS.
+        Winning will add one point to your score but if you lose your score will decrease by one as well!
+        A classic game to play, good luck and have fun!`,
+      gitHubUrl: 'https://github.com/Jul-Me/Rock-Paper-Scissors',
+      demoUrl: 'https://rock-paper-scissors-julian.netlify.app/',
+    },
   ];
   const renderCard = (item: PortfolioItem) => {
     const background = `${process.env.PUBLIC_URL}/images/${item.id}.png`;
 
     return (
-      <Col key={item.id}>
+      <Col key={item.id} className="portfolio-cols">
         <Card
           className="portfolio-card"
           border="light"
@@ -95,7 +113,7 @@ function Portfolio(): JSX.Element {
     <div className="portfolio" id={Sections.PORTFOLIO}>
       <Container>
         <Row className="mb-5">
-          <h1 className="text-end">My Portfolio</h1>
+          <h1 className="text-lg-end">My Portfolio</h1>
         </Row>
 
         <Row>{portfolioItems.map(renderCard)}</Row>
