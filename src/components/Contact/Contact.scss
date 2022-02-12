@@ -1,0 +1,26 @@
+@import '/src/index.scss';
+
+.contact {
+  @extend .section-gutter;
+
+  &-left-col {
+    border-right: 2px solid darken($secondary-color, 20%);
+
+    @include media-breakpoint-down(lg) {
+      border: none;
+    }
+  }
+
+  &-get-in-touch {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1rem;
+  }
+}
