@@ -32,8 +32,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0 3rem;
-    align-content: space-evenly;
+    align-content: space-around;
     justify-items: center;
+
+    > svg {
+      @extend .rubber-band-animation;
+
+      &:hover {
+        @extend .animated;
+      }
+    }
 
     @include media-breakpoint-down(xl) {
       grid-template-columns: 1fr 1fr;
@@ -41,12 +49,13 @@
 
     @include media-breakpoint-down(lg) {
       grid-template-columns: 1fr 1fr 1fr;
-      margin-top: 2rem;
+      margin-top: 3rem;
       padding: 0 7rem;
       align-content: center;
+      grid-gap: 2rem;
 
       > svg {
-        font-size: 2rem;
+        font-size: 3rem;
       }
     }
 
