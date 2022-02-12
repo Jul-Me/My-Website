@@ -39,6 +39,7 @@ function Contact(): JSX.Element {
       <h2 className="mb-5">Drop me a line</h2>
 
       <Form
+        name="contact"
         noValidate
         validated={validated}
         onSubmit={handleSubmit}
