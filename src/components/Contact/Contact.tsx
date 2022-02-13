@@ -11,6 +11,12 @@ function Contact(): JSX.Element {
   const [validated, setValidated] = useState<boolean>(false);
   const [successMsg, setSuccessMsg] = useState<string>('');
   const [errorMsg, setErrorMsg] = useState<string>('');
+  const [formState, setFormState] = useState<ContactFormData>({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
 
   const renderGetInTouch = () => (
     <>
@@ -43,15 +49,27 @@ function Contact(): JSX.Element {
         <Row className="mb-3">
           <Col md className="mb-3 mb-md-0">
             <FloatingLabel controlId={Controls.name} label="Your name">
-              <Form.Control type="text" placeholder="name" required />
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              <Form.Control
+                type="text"
+                name="name"
+                placeholder="name"
+                value={formState.name || ''}
+                onChange={handleChange}
+                required
+              />
               <Form.Control.Feedback type="invalid">Please enter your name.</Form.Control.Feedback>
             </FloatingLabel>
           </Col>
 
           <Col md>
             <FloatingLabel controlId={Controls.phone} label="Phone">
-              <Form.Control type="tel" placeholder="+44 000 0000 0000" />
+              <Form.Control
+                type="tel"
+                name="phone"
+                placeholder="+44 000 0000 0000"
+                value={formState.phone || ''}
+                onChange={handleChange}
+              />
             </FloatingLabel>
           </Col>
         </Row>
@@ -59,8 +77,14 @@ function Contact(): JSX.Element {
         <Row className="mb-3">
           <Col lg>
             <FloatingLabel controlId={Controls.email} label="Email address">
-              <Form.Control type="email" placeholder="name@example.com" required />
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              <Form.Control
+                type="email"
+                name="email"
+                placeholder="name@example.com"
+                value={formState.email || ''}
+                onChange={handleChange}
+                required
+              />
               <Form.Control.Feedback type="invalid">Please enter your email address.</Form.Control.Feedback>
             </FloatingLabel>
           </Col>
@@ -69,8 +93,14 @@ function Contact(): JSX.Element {
         <Row className="mb-3">
           <Col lg>
             <FloatingLabel controlId={Controls.message} label="Message">
-              <Form.Control as="textarea" placeholder="message" required />
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              <Form.Control
+                as="textarea"
+                name="message"
+                placeholder="message"
+                value={formState.message || ''}
+                onChange={handleChange}
+                required
+              />
               <Form.Control.Feedback type="invalid">Please enter your message.</Form.Control.Feedback>
             </FloatingLabel>
           </Col>
@@ -99,24 +129,26 @@ function Contact(): JSX.Element {
       .join('&');
   };
 
-  const handleSubmit = (event: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormState((prevState: ContactFormData) => {
+      return {
+        ...prevState,
+        [e.target.name]: e.target.value,
+      };
+    });
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
 
     if (form.checkValidity() === false) {
       event.stopPropagation();
     } else {
-      const values: ContactFormData = {
-        name: event.target[Controls.name].value,
-        phone: event.target[Controls.phone].value,
-        email: event.target[Controls.email].value,
-        message: event.target[Controls.message].value,
-      };
-
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: createQueryParamsFromObject({ 'form-name': 'contact', ...values }),
+        body: createQueryParamsFromObject({ 'form-name': 'contact', ...formState }),
       })
         .then(() => {
           setSuccessMsg(`Thanks for reaching out. I'll get back to you soon.`);
@@ -133,11 +165,11 @@ function Contact(): JSX.Element {
     <section className="contact" id={Sections.CONTACT}>
       <Container>
         <Row>
-          <Col lg={6} md={12} className="contact-left-col pe-5">
+          <Col lg={3} md={12} className="contact-left-col pe-4">
             {renderGetInTouch()}
           </Col>
 
-          <Col lg={6} md={12} className="ps-lg-5">
+          <Col lg={9} md={12} className="ps-lg-5">
             {renderDropMeALine()}
           </Col>
         </Row>
