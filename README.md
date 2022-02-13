@@ -1,46 +1,98 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Julian Memai | Web Developer
+==========================
 
-## Available Scripts
+Hello and welcome to the code for my personal portfolio website!
+  
+The main aim for this project was to polish my online presence and demostrate / practise the newly obtained skills from [School of Code](https://www.schoolofcode.co.uk/), an intense 16 week full-time coding bootcamp that I am taking part from November 2021 until March 2022.
 
-In the project directory, you can run:
 
-### `npm start`
+## Domain
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+https://www.julianmemai.co.uk
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Tech / frameworks
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Library: [React](https://reactjs.org/)
+* Programming Language: [TypeScript](https://www.typescriptlang.org/)
+* CSS Framework for React: [React Bootstrap](https://react-bootstrap.github.io/)
+* CSS with superpowers: [Sass](https://sass-lang.com/)
+* Deployment Platform: [Netlify](https://www.netlify.com/)
+* Form Submission Platform: [Netlify Forms](https://docs.netlify.com/forms/setup/)
+* Icon Library: [Font Awesome](https://fontawesome.com/)
 
-### `npm run build`
+## NPM Packages
+* Universally Unique IDentifier: [uuid](https://www.npmjs.com/package/uuid) 
+* Git hooks: [husky](https://www.npmjs.com/package/husky)
+* Code Formatter: [prettier](https://www.npmjs.com/package/prettier)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Directory Structure 
+```bash
+|-- code
+    |-- .eslintignore
+    |-- .gitignore
+    |-- .prettierignore
+    |-- LICENSE
+    |-- README.md
+    |-- package-lock.json
+    |-- package.json
+    |-- prettier.config.js
+    |-- tsconfig.json
+    |-- public
+    |   |-- favicon.ico
+    |   |-- index.html
+    |   |-- manifest.json
+    |   |-- robots.txt
+    |   |-- images
+    |       |-- catch-the-doggies.png
+    |       |-- github-dev-finder.png
+    |       |-- random-meal-generator.png
+    |       |-- rock-paper-scissors.png
+    |-- src
+        |-- App.scss
+        |-- App.test.tsx
+        |-- App.tsx
+        |-- index.scss
+        |-- index.tsx
+        |-- react-app-env.d.ts
+        |-- reportWebVitals.ts
+        |-- setupTests.ts
+        |-- variables.scss
+        |-- assets
+        |   |-- images
+        |       |-- grey.png
+        |       |-- logo.png
+        |       |-- profile.png
+        |-- components
+        |   |-- AboutMe
+        |   |   |-- AboutMe.scss
+        |   |   |-- AboutMe.tsx
+        |   |-- Contact
+        |   |   |-- Contact.scss
+        |   |   |-- Contact.tsx
+        |   |-- Hero
+        |   |   |-- Hero.scss
+        |   |   |-- Hero.tsx
+        |   |-- Nav
+        |   |   |-- Nav.scss
+        |   |   |-- Nav.tsx
+        |   |-- Portfolio
+        |       |-- Portfolio.scss
+        |       |-- Portfolio.tsx
+        |-- types
+            |-- ContactFormData.ts
+            |-- Controls.ts
+            |-- NavItem.ts
+            |-- PortfolioItem.ts
+            |-- Sections.ts
+            |-- react-app-env.d.ts
+   ``` 
+           
+## More Information
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**[Click here to visit my LinkedIn profile](https://www.linkedin.com/in/julian-memai/)**
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
