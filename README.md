@@ -4,8 +4,7 @@ Julian Memai | Web Developer
 
 Hello and welcome to the code for my personal portfolio website!
   
-The main aim for this project was to polish my online presence and demostrate / practise the newly obtained skills from [School of Code](https://www.schoolofcode.co.uk/),\
-an intense 16 week full-time coding bootcamp that I am taking part from November 2021 until March 2022.
+The main aim for this project was to polish my online presence and demostrate / practise the newly obtained skills from [School of Code](https://www.schoolofcode.co.uk/), an intense 16 week full-time coding bootcamp that I am taking part from November 2021 until March 2022.
 
 
 ## Domain
