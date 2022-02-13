@@ -40,7 +40,7 @@ function Nav({ scrollToComponent }: Props): JSX.Element {
     <Headroom>
       <Navbar expand="lg" className="nav">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand onClick={() => scrollToComponent(Sections.HOME)}>
             <img src={logo} alt="logo" className="nav-logo" />
           </Navbar.Brand>
 
