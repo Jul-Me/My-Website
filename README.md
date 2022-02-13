@@ -4,15 +4,16 @@ Julian Memai | Web Developer
 
 Hello and welcome to the code for my personal portfolio website!
   
-The main aim for this project was to polish my online presence and demostrate - practise the newly obtained skills from [School of Code](https://www.schoolofcode.co.uk/) an intense 16 week full-time coding bootcamp that I am taking part from November 2021 until March 2022.
+The main aim for this project was to polish my online presence and demostrate / practise the newly obtained skills from [School of Code](https://www.schoolofcode.co.uk/),\
+an intense 16 week full-time coding bootcamp that I am taking part from November 2021 until March 2022.
 
 
 ## Domain
 
-https://www.julianmemai.co.uk/
+https://www.julianmemai.co.uk
 
 
-## Tech / frameworks used :
+## Tech / frameworks
 
 * Library: [React](https://reactjs.org/)
 * Programming Language: [TypeScript](https://www.typescriptlang.org/)
@@ -22,7 +23,7 @@ https://www.julianmemai.co.uk/
 * Form Submission Platform: [Netlify Forms](https://docs.netlify.com/forms/setup/)
 * Icon Library: [Font Awesome](https://fontawesome.com/)
 
-## Packages used :
+## NPM Packages
 * Universally Unique IDentifier: [uuid](https://www.npmjs.com/package/uuid) 
 * Git hooks: [husky](https://www.npmjs.com/package/husky)
 * Code Formatter: [prettier](https://www.npmjs.com/package/prettier)
@@ -92,7 +93,7 @@ https://www.julianmemai.co.uk/
 ## More Information
 
 
-## **[Click here to visit my LinkedIn profile](https://www.linkedin.com/in/julian-memai/)**
+**[Click here to visit my LinkedIn profile](https://www.linkedin.com/in/julian-memai/)**
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
