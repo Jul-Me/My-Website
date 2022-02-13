@@ -46,22 +46,18 @@ function Portfolio(): JSX.Element {
       demoUrl: 'https://github-devfinder-julian.netlify.app/',
     },
     {
-      id: 'rock-paper-scissors',
-      text: 'Rock Paper Scissors',
-      description: `Rock Paper Scissors is a personal project build in Vanilla JS.
-        Winning will add one point to your score but if you lose your score will decrease by one as well!
-        A classic game to play, good luck and have fun!`,
-      gitHubUrl: 'https://github.com/Jul-Me/Rock-Paper-Scissors',
-      demoUrl: 'https://rock-paper-scissors-julian.netlify.app/',
+      id: '',
+      text: 'Coming soon...',
+      description: '',
+      gitHubUrl: '',
+      demoUrl: '',
     },
     {
-      id: 'rock-paper-scissors',
-      text: 'Rock Paper Scissors',
-      description: `Rock Paper Scissors is a personal project build in Vanilla JS.
-        Winning will add one point to your score but if you lose your score will decrease by one as well!
-        A classic game to play, good luck and have fun!`,
-      gitHubUrl: 'https://github.com/Jul-Me/Rock-Paper-Scissors',
-      demoUrl: 'https://rock-paper-scissors-julian.netlify.app/',
+      id: '',
+      text: 'Coming soon...',
+      description: '',
+      gitHubUrl: '',
+      demoUrl: '',
     },
   ];
   const renderCard = (item: PortfolioItem) => {
