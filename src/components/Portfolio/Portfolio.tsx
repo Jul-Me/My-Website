@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
@@ -7,7 +7,7 @@ import { PortfolioItem } from '../../types/PortfolioItem';
 import { Sections } from '../../types/Sections';
 import './Portfolio.scss';
 
-function Portfolio(): JSX.Element {
+const Portfolio = forwardRef((_, ref: React.ForwardedRef<HTMLDivElement>): JSX.Element => {
   const portfolioItems: PortfolioItem[] = [
     {
       id: 'rock-paper-scissors',
@@ -46,14 +46,14 @@ function Portfolio(): JSX.Element {
       demoUrl: 'https://github-devfinder-julian.netlify.app/',
     },
     {
-      id: '',
+      id: '1',
       text: 'Coming soon...',
       description: '',
       gitHubUrl: '',
       demoUrl: '',
     },
     {
-      id: '',
+      id: '2',
       text: 'Coming soon...',
       description: '',
       gitHubUrl: '',
@@ -106,7 +106,7 @@ function Portfolio(): JSX.Element {
   };
 
   return (
-    <div className="portfolio" id={Sections.PORTFOLIO}>
+    <section className="portfolio" id={Sections.PORTFOLIO} ref={ref}>
       <Container>
         <Row className="mb-5">
           <h1 className="text-lg-end">My Portfolio</h1>
@@ -114,8 +114,8 @@ function Portfolio(): JSX.Element {
 
         <Row>{portfolioItems.map(renderCard)}</Row>
       </Container>
-    </div>
+    </section>
   );
-}
+});
 
 export default Portfolio;

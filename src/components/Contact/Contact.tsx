@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import { Alert, Col, Container, FloatingLabel, Form, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquarePhone, faEnvelopeOpen, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
@@ -7,7 +7,7 @@ import { ContactFormData } from '../../types/ContactFormData';
 import { Sections } from '../../types/Sections';
 import './Contact.scss';
 
-function Contact(): JSX.Element {
+const Contact = forwardRef((_, ref: React.ForwardedRef<HTMLDivElement>): JSX.Element => {
   const [validated, setValidated] = useState<boolean>(false);
   const [successMsg, setSuccessMsg] = useState<string>('');
   const [errorMsg, setErrorMsg] = useState<string>('');
@@ -162,7 +162,7 @@ function Contact(): JSX.Element {
   };
 
   return (
-    <section className="contact" id={Sections.CONTACT}>
+    <section className="contact" id={Sections.CONTACT} ref={ref}>
       <Container>
         <Row>
           <Col lg={3} md={12} className="contact-left-col pe-4">
@@ -176,6 +176,6 @@ function Contact(): JSX.Element {
       </Container>
     </section>
   );
-}
+});
 
 export default Contact;

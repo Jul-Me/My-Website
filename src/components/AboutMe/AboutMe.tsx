@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDumbbell, faPlane, faBicycle } from '@fortawesome/free-solid-svg-icons';
@@ -16,7 +16,7 @@ import {
 import { Sections } from '../../types/Sections';
 import './AboutMe.scss';
 
-function AboutMe(): JSX.Element {
+const AboutMe = forwardRef((_, ref: React.ForwardedRef<HTMLDivElement>): JSX.Element => {
   const getAge = (): number => {
     const dob = new Date('1991/05/04');
     const diff_ms = Date.now() - dob.getTime();
@@ -105,7 +105,7 @@ function AboutMe(): JSX.Element {
   };
 
   return (
-    <div className="about-me" id={Sections.ABOUT}>
+    <section className="about-me" id={Sections.ABOUT} ref={ref}>
       <Container>
         <Row>
           <Col lg={6} md={12}>
@@ -127,8 +127,8 @@ function AboutMe(): JSX.Element {
           </Col>
         </Row>
       </Container>
-    </div>
+    </section>
   );
-}
+});
 
 export default AboutMe;

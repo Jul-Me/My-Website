@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import { v4 as uuid } from 'uuid';
-import { useNavigate } from 'react-router-dom';
 import { Col, Row, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 import { Sections } from '../../types/Sections';
 import './Hero.scss';
 
-function Hero(): JSX.Element {
-  const navigate = useNavigate();
+interface Props {
+  scrollToContact: () => void;
+}
+
+const Hero = forwardRef(({ scrollToContact }: Props, ref: React.ForwardedRef<HTMLDivElement>): JSX.Element => {
   const transformation = (str: string) => [...str].map((char) => <Item key={uuid()} char={char} />);
 
   const renderGreeting = () => {
@@ -22,7 +24,7 @@ function Hero(): JSX.Element {
         <h1 className="display-2">{transformation(str2)}</h1>
         <h3>{transformation(str3)}</h3>
 
-        <button className="button mt-4" onClick={() => navigate(`#${Sections.CONTACT}`)}>
+        <button className="button mt-4" onClick={scrollToContact}>
           Contact
         </button>
       </>
@@ -57,7 +59,7 @@ function Hero(): JSX.Element {
   );
 
   return (
-    <div className="hero" id={Sections.HOME}>
+    <section className="hero" id={Sections.HOME} ref={ref}>
       <Container>
         <Row>
           <Col lg={6} md={12} className="hero-greeting hero-col">
@@ -73,9 +75,9 @@ function Hero(): JSX.Element {
           </Col>
         </Row>
       </Container>
-    </div>
+    </section>
   );
-}
+});
 
 export default Hero;
 
