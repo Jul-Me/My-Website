@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import StyledNav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
+import Headroom from 'react-headroom';
 import logo from '../../assets/images/logo.png';
 import { NavItem } from '../../types/NavItem';
 import { Sections } from '../../types/Sections';
@@ -36,19 +37,21 @@ function Nav({ scrollToComponent }: Props): JSX.Element {
   };
 
   return (
-    <Navbar expand="lg" className="nav">
-      <Container>
-        <Navbar.Brand href="#home">
-          <img src={logo} alt="logo" className="nav-logo" />
-        </Navbar.Brand>
+    <Headroom>
+      <Navbar expand="lg" className="nav">
+        <Container>
+          <Navbar.Brand href="#home">
+            <img src={logo} alt="logo" className="nav-logo" />
+          </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-        <Navbar.Collapse id="basic-navbar-nav">
-          <StyledNav className="ms-auto align-items-center">{navItems?.map(renderItem)}</StyledNav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+          <Navbar.Collapse id="basic-navbar-nav">
+            <StyledNav className="ms-auto align-items-center">{navItems?.map(renderItem)}</StyledNav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </Headroom>
   );
 }
 
