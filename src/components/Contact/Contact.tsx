@@ -38,16 +38,7 @@ function Contact(): JSX.Element {
     <>
       <h2 className="mb-5">Drop me a line</h2>
 
-      <Form
-        name="contact"
-        noValidate
-        validated={validated}
-        onSubmit={handleSubmit}
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        method="post"
-        className="mb-3"
-      >
+      <Form name="contact" noValidate validated={validated} onSubmit={handleSubmit} method="post" className="mb-3">
         <input type="hidden" name="form-name" value="contact" />
         <Row className="mb-3">
           <Col md className="mb-3 mb-md-0">
