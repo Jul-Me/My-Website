@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import StyledNav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
@@ -29,9 +30,9 @@ function Nav({ scrollToComponent }: Props): JSX.Element {
       );
     } else {
       return (
-        <button key={item.id} className="button ms-lg-3 m-auto">
+        <Link key={item.id} className="button ms-lg-3 m-auto" to="/files/cv.pdf" target="_blank" download>
           {item.text}
-        </button>
+        </Link>
       );
     }
   };
