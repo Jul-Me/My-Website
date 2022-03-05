@@ -44,9 +44,12 @@ https://www.julianmemai.co.uk
     |   |-- index.html
     |   |-- manifest.json
     |   |-- robots.txt
+    |   |-- files
+    |   |   |-- cv.pdf
     |   |-- images
     |       |-- catch-the-doggies.png
     |       |-- github-dev-finder.png
+    |       |-- my-website.png
     |       |-- random-meal-generator.png
     |       |-- rock-paper-scissors.png
     |-- src
@@ -87,7 +90,8 @@ https://www.julianmemai.co.uk
             |-- PortfolioItem.ts
             |-- Sections.ts
             |-- react-app-env.d.ts
-   ``` 
+
+``` 
            
 ## More Information
 
