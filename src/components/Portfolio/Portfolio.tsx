@@ -48,11 +48,10 @@ const Portfolio = forwardRef((_, ref: React.ForwardedRef<HTMLDivElement>): JSX.E
     {
       id: 'my-website',
       text: 'Personal Portfolio Website',
-      description: `The main aim for this project was to polish my online presence and
+      description: `The main aim of this project was to polish my online presence and
         demostrate / practise the newly obtained skills from School of Code,
-        an intense 16 week full-time coding bootcamp that I am taking part
-        from November 2021 until March 2022.
-      `,
+        an intense 16 week full-time coding bootcamp that I was taking part
+        in November 2021 until March 2022.`,
       gitHubUrl: 'https://github.com/Jul-Me/My-Website',
       demoUrl: 'https://www.julianmemai.co.uk',
     },
