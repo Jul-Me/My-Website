@@ -40,19 +40,19 @@ const Hero = forwardRef(({ scrollToContact }: Props, ref: React.ForwardedRef<HTM
           rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
-          <FontAwesomeIcon icon={faLinkedin} size="2x" />
+          <FontAwesomeIcon icon={faLinkedin} size="3x" />
         </a>
       </Col>
 
       <Col lg={12} xs={4}>
         <a href="https://github.com/Jul-Me" target="_blank" rel="noopener noreferrer" aria-label="Github">
-          <FontAwesomeIcon icon={faGithubSquare} size="2x" />
+          <FontAwesomeIcon icon={faGithubSquare} size="3x" />
         </a>
       </Col>
 
       <Col lg={12} xs={4}>
         <a href="https://twitter.com/julianmemai" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-          <FontAwesomeIcon icon={faTwitterSquare} size="2x" />
+          <FontAwesomeIcon icon={faTwitterSquare} size="3x" />
         </a>
       </Col>
     </Row>

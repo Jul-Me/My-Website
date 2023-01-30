@@ -4,7 +4,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import StyledNav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Headroom from 'react-headroom';
-import logo from '../../assets/images/logo.png';
 import { NavItem } from '../../types/NavItem';
 import { Sections } from '../../types/Sections';
 import './Nav.scss';
@@ -30,7 +29,7 @@ function Nav({ scrollToComponent }: Props): JSX.Element {
       );
     } else {
       return (
-        <Link key={item.id} className="button ms-lg-3 m-auto" to="/files/cv.pdf" target="_blank" download>
+        <Link key={item.id} className="button ms-lg-3 m-auto" to="/files/JulianMemaiCV.pdf" target="_blank" download>
           {item.text}
         </Link>
       );
@@ -41,9 +40,7 @@ function Nav({ scrollToComponent }: Props): JSX.Element {
     <Headroom>
       <Navbar expand="lg" className="nav">
         <Container>
-          <Navbar.Brand onClick={() => scrollToComponent(Sections.HOME)}>
-            <img src={logo} alt="logo" className="nav-logo" />
-          </Navbar.Brand>
+          <Navbar.Brand onClick={() => scrollToComponent(Sections.HOME)}></Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
 

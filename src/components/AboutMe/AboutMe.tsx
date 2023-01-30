@@ -4,14 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDumbbell, faPlane, faBicycle } from '@fortawesome/free-solid-svg-icons';
 import {
   faReact,
-  faNode,
+  faLaravel,
   faHtml5,
   faSass,
   faJsSquare,
   faGitAlt,
   faCss3Alt,
-  faFigma,
-  faSketch,
+  faPhp,
+  faBootstrap,
 } from '@fortawesome/free-brands-svg-icons';
 import { Sections } from '../../types/Sections';
 import './AboutMe.scss';
@@ -34,16 +34,16 @@ const AboutMe = forwardRef((_, ref: React.ForwardedRef<HTMLDivElement>): JSX.Ele
           Web Developer | Problem solver
           <br />
           <br />
-          Ambitious and driven to always expand my comfort zone with new challenges-adventures.Eager learner with a
+          Ambitious and driven to always expand my comfort zone with new challenges-adventures. Eager learner with a
           hands on attitude and strong work ethics.
           <br />
           <br />
-          School of Code bootcamp graduate, passionate about developing user-friendly software applications and bringing
-          ideas to life in the browser. Strong preference for Front-End technologies and easy to use, intuitive UX/UI.
+          Passionate about developing user-friendly software applications and bringing ideas to life in the browser.
+          Strong preference for web technologies and easy to use intuitive features.
           <br />
           <br />
-          Skilled in HTML5, CSS, JavaScript, React.js , Node.js , Express.js and PostgreSQL. Working knowledge of Adobe
-          Creative Suite.
+          Skilled in HTML5, CSS, Bootstrap, React.js , Laravel , Livewire and mySQL. Working knowledge of Adobe Creative
+          Suite.
         </p>
       </div>
     );
@@ -54,25 +54,13 @@ const AboutMe = forwardRef((_, ref: React.ForwardedRef<HTMLDivElement>): JSX.Ele
       <>
         <Row className="mt-3">
           <Col xl={6} lg={12} className="about-me-details">
-            <span className="text-bold">Gender:&nbsp;</span>
-            <span>Male</span>
-          </Col>
-
-          <Col xl={6} lg={12} className="about-me-details">
-            <span className="text-bold">Location:&nbsp;</span>
-            <span>Reading, UK</span>
-          </Col>
-        </Row>
-
-        <Row className="mt-3">
-          <Col xl={6} lg={12} className="about-me-details">
             <span className="text-bold">Age:&nbsp;</span>
             <span>{getAge()}</span>
           </Col>
 
           <Col xl={6} lg={12} className="about-me-details">
-            <span className="text-bold">Nationality:&nbsp;</span>
-            <span>Greek</span>
+            <span className="text-bold">Location:&nbsp;</span>
+            <span>United Kingdom</span>
           </Col>
         </Row>
       </>
@@ -117,13 +105,13 @@ const AboutMe = forwardRef((_, ref: React.ForwardedRef<HTMLDivElement>): JSX.Ele
           <Col lg={6} md={12} className="about-me-tools">
             <FontAwesomeIcon icon={faReact} size="5x" />
             <FontAwesomeIcon icon={faJsSquare} size="5x" />
-            <FontAwesomeIcon icon={faNode} size="5x" />
-            <FontAwesomeIcon icon={faSass} size="5x" />
+            <FontAwesomeIcon icon={faLaravel} size="5x" />
             <FontAwesomeIcon icon={faHtml5} size="5x" />
+            <FontAwesomeIcon icon={faSass} size="5x" />
             <FontAwesomeIcon icon={faGitAlt} size="5x" />
             <FontAwesomeIcon icon={faCss3Alt} size="5x" />
-            <FontAwesomeIcon icon={faFigma} size="5x" />
-            <FontAwesomeIcon icon={faSketch} size="5x" />
+            <FontAwesomeIcon icon={faPhp} size="5x" />
+            <FontAwesomeIcon icon={faBootstrap} size="5x" />
           </Col>
         </Row>
       </Container>
